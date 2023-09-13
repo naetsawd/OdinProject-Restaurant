@@ -7,5 +7,5 @@
   
 // document.body.appendChild(component());
 
-const element = document.getElementById("content");
-element.innerHTML = "Hello World!";
+// const element = document.getElementById("content");
+// element.innerHTML = "Hello World!";
