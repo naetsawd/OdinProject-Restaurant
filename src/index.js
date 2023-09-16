@@ -1,30 +1,46 @@
 import { createHomeSection } from "./home";
+import { createMenuSection } from "./menu";
+import { createContactSection } from "./contact";
 
-const grid = document.getElementById("grid");
+const contentContainer = document.getElementById("content");
 
 function createHeader() {
     const header = document.createElement("header");
     const nav = document.createElement("nav");
 
-    const menuLink = document.createElement("p");
-    menuLink.textContent = "Menu";
+    const navigationLinks = [
+        { text: "Menu", action: createMenuSection, page: "menu" },
+        { text: "Pixel Bites", action: createHomeSection, page: "home" },
+        { text: "Contact", action: createContactSection, page: "contact" },
+    ];
 
-    const logo = document.createElement("p");
-    logo.textContent = "Pixel Bites";
-    logo.id = "navLogo";
+    navigationLinks.forEach(({ text, action, page }) => {
+        const link = document.createElement("p");
+        link.textContent = text;
+        link.addEventListener("click", function () {
+            contentContainer.innerHTML = "";
+            contentContainer.appendChild(createHeader());
+            contentContainer.appendChild(action());
 
-    const contactLink = document.createElement("p");
-    contactLink.textContent = "Contact";
-
-    nav.appendChild(menuLink);
-    nav.appendChild(logo);
-    nav.appendChild(contactLink);
+            localStorage.setItem("currentPage", page);
+        });
+        nav.appendChild(link);
+    });
 
     header.appendChild(nav);
-
     return header;
 }
 
-grid.appendChild(createHeader());
+// Check if there is a stored page in localStorage
+const currentPage = localStorage.getItem("currentPage");
 
-grid.appendChild(createHomeSection());
+// Initially add the header and the corresponding section based on the stored page
+contentContainer.appendChild(createHeader());
+
+if (currentPage === "menu") {
+    contentContainer.appendChild(createMenuSection());
+} else if (currentPage === "contact") {
+    contentContainer.appendChild(createContactSection());
+} else {
+    contentContainer.appendChild(createHomeSection());
+}

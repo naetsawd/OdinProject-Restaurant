@@ -1,4 +1,5 @@
 export function createHomeSection() {
+
     const homeContainer = document.createElement('span');
     homeContainer.id = 'home';
 
