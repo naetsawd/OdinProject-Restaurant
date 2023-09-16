@@ -1,10 +1,9 @@
 export function createHomeSection() {
-
-    const homeContainer = document.createElement('span');
-    homeContainer.id = 'home';
+    const homePageContainer = document.createElement('span');
+    homePageContainer.id = 'pageContainer';
 
     const homeTitle = document.createElement('div');
-    homeTitle.id = 'homeTitle';
+    homeTitle.id = 'pageTitle';
     homeTitle.textContent = 'Level Up Your Nostalgia!';
 
     const whiteLine = document.createElement('div');
@@ -18,9 +17,9 @@ export function createHomeSection() {
         'by iconic gaming characters, this diner is a haven for gamers ' +
         'and retro enthusiasts alike.';
 
-    homeContainer.appendChild(homeTitle);
-    homeContainer.appendChild(whiteLine);
-    homeContainer.appendChild(homeDesc);
+    homePageContainer.appendChild(homeTitle);
+    homePageContainer.appendChild(whiteLine);
+    homePageContainer.appendChild(homeDesc);
 
-    return homeContainer;
+    return homePageContainer;
 }

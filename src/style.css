@@ -20,6 +20,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Cyberpunk";
+    src: url('/src/fonts/CyberpunkWaifus.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
 /* General */
 * {
     margin: 0;
@@ -43,7 +50,21 @@ body {
     background-color: white;
     width: 1200px;
     height: 5px;
-    margin: 25px;
+    margin: 20px;
+}
+
+#pageContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#pageTitle {
+    color: white;
+    font-size: 100px;
+    font-family: "Arcade";
 }
 
 /* Header & Nav */
@@ -66,12 +87,12 @@ nav {
     font-family: "Crang";
 }
 
-nav > p {
+.navLinks {
     padding-bottom: 10px;
     transition: transform 0.4s ease;
 }
 
-nav > p:hover {
+.navLinks:hover {
     transform: scale(1.1);
     cursor: pointer;
     color: lightcoral;
@@ -82,20 +103,6 @@ nav > p:hover {
 }
 
 /* Home Section */
-#home {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-#homeTitle {
-    color: white;
-    font-size: 100px;
-    font-family: "Arcade";
-}
-
 #homeDesc {
     color: white;
     font-family: "Dogcia";
@@ -105,7 +112,78 @@ nav > p:hover {
 }
 
 /* Menu Section */
+#menuCategories {
+    border: 1px solid white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 80vw;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
 
+.menuItemCategory {
+    display: flex;
+    color: white;
+    font-family: "Dogcia";
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuItemCategory:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: lightcoral;
+}
+
+#currentCategory {
+    color: lightcoral;
+}
+
+#menuItemsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1000px;
+    height: 400px;
+    color: white;
+    align-items: center;
+    justify-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.menuItem {
+    display: grid;
+    grid-template-rows: 20% 20% 10% 50%;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 300px;
+    height: 150px;
+    align-items: center;
+    justify-items: center;
+    font-family: "Cyberpunk";
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+}
+
+.menuItem > .whiteLine {
+    width: 200px;
+    height: 1px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 3px;
+}
+
+.menuItemName {
+}
+
+
+.menuItemDescr {
+    margin: 10px;
+    padding: 0px;
+}
 
 /* Contact Section */
 

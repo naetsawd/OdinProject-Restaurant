@@ -17,6 +17,12 @@ function createHeader() {
     navigationLinks.forEach(({ text, action, page }) => {
         const link = document.createElement("p");
         link.textContent = text;
+        link.classList.add("navLinks");
+
+        if (text === "Pixel Bites") {
+            link.id = "navLogo";
+        }
+
         link.addEventListener("click", function () {
             contentContainer.innerHTML = "";
             contentContainer.appendChild(createHeader());
@@ -24,6 +30,7 @@ function createHeader() {
 
             localStorage.setItem("currentPage", page);
         });
+
         nav.appendChild(link);
     });
 
@@ -31,10 +38,8 @@ function createHeader() {
     return header;
 }
 
-// Check if there is a stored page in localStorage
 const currentPage = localStorage.getItem("currentPage");
 
-// Initially add the header and the corresponding section based on the stored page
 contentContainer.appendChild(createHeader());
 
 if (currentPage === "menu") {
