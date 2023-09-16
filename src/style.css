@@ -33,7 +33,7 @@ body {
 #grid {
     display: grid;
     grid-template-rows: 15vh 85vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), 
         rgba(0, 0, 0, 0.25));
 }
 
@@ -42,28 +42,6 @@ body {
     width: 1200px;
     height: 5px;
     margin: 25px;
-}
-
-#home {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-#homeTitle {
-    color: white;
-    font-size: 100px;
-    font-family: "Arcade";
-}
-
-#homeDesc {
-    color: white;
-    font-family: "Dogcia";
-    font-size: 20px;
-    width: 75%;
-    line-height: 25px;
 }
 
 header {
@@ -87,9 +65,37 @@ nav {
 
 nav > p {
     padding-bottom: 10px;
-    border-bottom: 3px solid white;
+    transition: transform 0.4s ease;
+}
+
+nav > p:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: lightcoral;
 }
 
 #navLogo {
     font-size: 50px;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#homeTitle {
+    color: white;
+    font-size: 100px;
+    font-family: "Arcade";
+}
+
+#homeDesc {
+    color: white;
+    font-family: "Dogcia";
+    font-size: 20px;
+    width: 75%;
+    line-height: 30px;
 }
