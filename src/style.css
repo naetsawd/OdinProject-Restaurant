@@ -63,31 +63,25 @@ body {
 
 #pageTitle {
     color: white;
-    font-size: 100px;
+    font-size: 40px;
     font-family: "Arcade";
 }
 
-/* Header & Nav */
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
+/* Header */
 
-nav {
-    width: 100%;
-    color: white;
-    display: flex;
-    flex-direction: row;
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     list-style-type: none;
-    font-size: 25px;
     align-items: center;
-    justify-content: space-evenly;
-    font-family: "Crang";
+    justify-items: center;
+
 }
 
 .navLinks {
+    color: white;
+    font-family: "Crang";
+    font-size: 30px;
     padding-bottom: 10px;
     transition: transform 0.4s ease;
 }
@@ -98,8 +92,8 @@ nav {
     color: lightcoral;
 }
 
-#navLogo {
-    font-size: 50px;
+#headerLogo {
+    font-size: 60px;
 }
 
 /* Home Section */
@@ -109,6 +103,12 @@ nav {
     font-size: 20px;
     width: 75%;
     line-height: 30px;
+}
+
+#homePageTitle {
+    color: white;
+    font-size: 100px;
+    font-family: "Arcade";
 }
 
 /* Menu Section */
@@ -137,10 +137,6 @@ nav {
     color: lightcoral;
 }
 
-#currentCategory {
-    color: lightcoral;
-}
-
 #menuItemsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -159,7 +155,7 @@ nav {
     border: 1px solid white;
     border-radius: 10px;
     width: 300px;
-    height: 150px;
+    height: 170px;
     align-items: center;
     justify-items: center;
     font-family: "Cyberpunk";

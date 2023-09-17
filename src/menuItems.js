@@ -4,7 +4,7 @@ export function categoryLists(categoryName) {
         { name: "Pixel Punch", price: "$3.49", descr: "A fruity punch with a pixelated surprise." },
         { name: "Zelda's Elixir", price: "$2.99", descr: "A legendary green tea blend." },
         { name: "Sonic Speedster", price: "$3.99", descr: "A blue raspberry slushie with a hint of lime." },
-        { name: "1-Up Elixir", price: "$3.49", descr: "A refreshing green tea with a hint of mint." },
+        { name: "1-UP Elixir", price: "$3.49", descr: "A refreshing green tea with a hint of mint." },
         { name: "Final Fantasy Frappe", price: "$4.99", descr: "A blended coffee frappe with a magical touch." }
     ];
 
@@ -12,9 +12,9 @@ export function categoryLists(categoryName) {
         { name: "Power-Up Pancakes", price: "$6.99", descr: "Fluffy pancakes with power-up syrup and fruit toppings." },
         { name: "Luigi's Omelette", price: "$7.49", descr: "A hearty omelette filled with mushrooms, peppers, and cheese." },
         { name: "Sonic's Spinach Scramble", price: "$7.99", descr: "Scrambled eggs with fresh spinach, tomatoes, and feta cheese." },
-        { name: "Donkey Kong French Toast", price: "$8.49", descr: "French toast topped with bananas, caramel sauce, and whipped cream." },
+        { name: "Donkey Kong French Toast", price: "$7.49", descr: "French toast topped with bananas, caramel sauce, and whipped cream." },
         { name: "Space Invaders Waffles", price: "$6.99", descr: "Crispy waffles with a choice of berry compote or chocolate chips." },
-        { name: "Pikachu's Parfait", price: "$4.99", descr: "Layers of yogurt, granola, and fresh berries." }
+        { name: "Rossi's Breakfast Wrap", price: "$8.99", descr: "Bacon, scrambled eggs, and seasoned potato hash, wrapped in a tortilla." }
     ];
 
     const appetizerItems = [
@@ -22,8 +22,8 @@ export function categoryLists(categoryName) {
         { name: "Galaga Garlic Bread", price: "$5.99", descr: "Garlic bread served with marinara dipping sauce." },
         { name: "Pong Potato Skins", price: "$6.99", descr: "Potato skins loaded with cheese, bacon, and sour cream." },
         { name: "Tetris Tofu Bites", price: "$5.49", descr: "Crispy tofu bites with a sweet chili dipping sauce." },
-        { name: "Galaga Guacamole", price: "$6.99", descr: "Fresh guacamole served with tortilla chips and salsa." },
-        { name: "Minecraft Mozzarella Sticks", price: "$4.99", descr: "Mozzarella sticks served with marinara sauce." }
+        { name: "Ludicolo Guacamole", price: "$7.49", descr: "Fresh guacamole served with tortilla chips and salsa." },
+        { name: "TMNT Pizza Bites", price: "$6.99", descr: "Mini pizza bites bursting with cheesy goodness and pepperoni." }
     ];
 
     const mainCourseItems = [
@@ -36,10 +36,12 @@ export function categoryLists(categoryName) {
     ];
 
     const dessertItems = [
-        { name: "Pac-Man Pie", price: "$5.49", descr: "A cherry pie with a pie-chart design." },
-        { name: "Space Invaders Sundae", price: "$6.99", descr: "Vanilla ice cream with alien-themed toppings." },
+        { name: "Pac-Man Pie", price: "$5.49", descr: "A juicy cherry pie with a nostalgic design." },
+        { name: "Space Invaders Sundae", price: "$6.99", descr: "Ice cream of choice     with alien-themed toppings." },
         { name: "Cheesecake Galaxy", price: "$5.99", descr: "Creamy cheesecake with a galaxy-inspired swirl." },
-        { name: "Super Mario Tiramisu", price: "$6.49", descr: "A classic Italian tiramisu with a Mario twist." }
+        { name: "Super Mario Tiramisu", price: "$6.49", descr: "A classic Italian tiramisu with a Mario twist." },
+        { name: "Pikachu's Parfait", price: "$4.99", descr: "Layers of flavored yogurt, granola, and fresh berries." },
+        { name: "Tetris Treats", price: "9.99", descr: "Pastry block layers with sweet surprises, topped with raspberry sauce."}
     ];
 
     switch (categoryName.toLowerCase()) {
@@ -49,7 +51,7 @@ export function categoryLists(categoryName) {
             return breakfastItems;
         case "appetizers":
             return appetizerItems;
-        case "mainCourses":
+        case "main courses":
             return mainCourseItems;
         case "desserts":
             return dessertItems;
