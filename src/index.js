@@ -67,7 +67,7 @@ function createFooter() {
 
     const icon = document.createElement("img");
     icon.id = ("githubIcon");
-    icon.src = ("/dist/images/githubLogo.svg")
+    icon.src = ("images/githubLogo.svg")
 
     link.appendChild(icon);
 
