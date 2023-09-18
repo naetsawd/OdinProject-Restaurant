@@ -7,6 +7,8 @@ This website was made for the OdinProject's Restaurant Page assignment. The assi
 ## Live Demo:
 [Pixel Bites](https://naetsawd.github.io/OdinProject-Restaurant)
 
+<div align="center"><img src="siteImage.png" width="900" /></div>
+
 ## About Website:
 The idea I settled on is a retro arcade and pixel themed cafe called Pixel Bites. Every desgin choice is based on this theme. The menu items are also named after classic arcade games. My favorite thing is the background which is a cozy campire gif from the game Shovel Knight which works really well with the theme and colors for the website.
 
