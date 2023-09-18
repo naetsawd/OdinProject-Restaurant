@@ -24,6 +24,7 @@ function createHeaderLink(text, action, page) {
         contentContainer.innerHTML = "";
         contentContainer.appendChild(createHeader());
         contentContainer.appendChild(action());
+        contentContainer.appendChild(createFooter());
     });
 
     return link;
@@ -51,5 +52,34 @@ function initialize() {
     }
 }
 
+function createFooter() {
+    const footerContainer = document.createElement("div");
+    footerContainer.id = "footerContainer";
+
+    const footerText = document.createElement("p");
+    footerText.id = "footerText";
+    footerText.textContent = "Designed & Built by Dechsit Naetsawan";
+
+    // Create an anchor element for the link
+    const link = document.createElement("a");
+    link.href = "https://github.com/naetsawd/OdinProject-Restaurant"; // Replace with the actual URL
+    link.target = "_blank"; // Open link in a new tab/window
+
+    // Create an icon element (e.g., a font-awesome icon)
+    const icon = document.createElement("img");
+    icon.id = ("githubIcon");
+    icon.src = ("/src/images/github.svg")
+
+    // Append the icon to the anchor element
+    link.appendChild(icon);
+
+    // Append the footer text and the link to the footer
+    footerContainer.appendChild(link);
+    footerContainer.appendChild(footerText);
+
+    return footerContainer;
+}
+
 contentContainer.appendChild(createHeader());
 initialize();
+contentContainer.appendChild(createFooter());

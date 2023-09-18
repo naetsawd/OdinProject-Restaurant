@@ -35,13 +35,13 @@
 }
 
 body {
-    background-image: url("/src/background.gif");
+    background-image: url("/src/images/background.gif");
     background-size: cover;
 }
 
 #content {
     display: grid;
-    grid-template-rows: 15vh 85vh;
+    grid-template-rows: 15vh 80vh 5vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), 
         rgba(0, 0, 0, 0.25));
 }
@@ -62,7 +62,7 @@ body {
 }
 
 #pageTitle {
-    color: white;
+    color: lightskyblue;
     font-size: 40px;
     font-family: "Arcade";
 }
@@ -97,18 +97,21 @@ header {
 }
 
 /* Home Section */
+#homePageTitle {
+    color: lightskyblue;
+    font-size: 100px;
+    font-family: "Arcade";
+}
+
 #homeDesc {
     color: white;
     font-family: "Dogcia";
     font-size: 20px;
     width: 75%;
     line-height: 30px;
-}
-
-#homePageTitle {
-    color: white;
-    font-size: 100px;
-    font-family: "Arcade";
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 /* Menu Section */
@@ -173,13 +176,62 @@ header {
 }
 
 .menuItemName {
+    color: aquamarine;
 }
 
+.menuItemPrice {
+    color: lightgoldenrodyellow;
+}
 
 .menuItemDescr {
+    color: plum;
     margin: 10px;
     padding: 0px;
 }
 
 /* Contact Section */
+#contactItemsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+}
+
+.contactItemName {
+    font-family: "Dogcia";
+    font-size: 40px;
+    color: aquamarine;
+}
+
+.contactItemText {
+    font-family: "Cyberpunk";
+    font-size: 40px;
+    color: plum;
+}
+
+/* Footer */
+#footerContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footerText {
+    color: white;
+    font-family: "Cyberpunk";
+    font-size: 20px;
+}
+
+#githubIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
 
