@@ -1,28 +1,28 @@
 /* Fonts */
 @font-face {
     font-family: "Arcade";
-    src: url('/dist/fonts/04B_30__.ttf');
+    src: url('fonts/04B_30__.ttf');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Crang";
-    src: url('/dist/fonts/Crang.ttf');
+    src: url('fonts/Crang.ttf');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Dogcia";
-    src: url('/dist/fonts/dogica.ttf');
+    src: url('fonts/dogica.ttf');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Cyberpunk";
-    src: url('/dist/fonts/CyberpunkWaifus.ttf');
+    src: url('fonts/CyberpunkWaifus.ttf');
     font-weight: 600;
     font-style: normal;
 }
@@ -35,7 +35,7 @@
 }
 
 body {
-    background-image: url("/dist/images/background.gif");
+    background-image: url("images/background.gif");
     background-size: cover;
 }
 
