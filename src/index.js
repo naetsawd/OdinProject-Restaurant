@@ -11,6 +11,7 @@ const navigationLinks = [
 const contentContainer = document.getElementById("content");
 
 function createHeaderLink(text, action, page) {
+    const currentPage = localStorage.getItem("currentPage");
     const link = document.createElement("p");
     link.textContent = text;
     link.classList.add("navLinks");
@@ -18,6 +19,10 @@ function createHeaderLink(text, action, page) {
     if (text === "Pixel Bites") {
         link.id = "headerLogo";
     }
+
+    if (currentPage === page) {
+        link.style.color = "lightcoral";
+    };
 
     link.addEventListener("click", function () {
         localStorage.setItem("currentPage", page);
@@ -62,8 +67,8 @@ function createFooter() {
     footerText.textContent = "Designed & Built by Dechsit Naetsawan";
 
     const link = document.createElement("a");
-    link.href = "https://github.com/naetsawd/OdinProject-Restaurant"; // Replace with the actual URL
-    link.target = "_blank"; // Open link in a new tab/window
+    link.href = "https://github.com/naetsawd/OdinProject-Restaurant";
+    link.target = "_blank";
 
     const icon = document.createElement("img");
     icon.id = ("githubIcon");
