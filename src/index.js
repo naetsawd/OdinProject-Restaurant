@@ -1,3 +1,5 @@
+import './style.css';
+import githubLogo from './images/githubLogo.svg';
 import { createHomeSection } from "./home";
 import { createMenuSection } from "./menu";
 import { createContactSection } from "./contact";
@@ -72,7 +74,7 @@ function createFooter() {
 
     const icon = document.createElement("img");
     icon.id = ("githubIcon");
-    icon.src = ("images/githubLogo.svg")
+    icon.src = (githubLogo);
 
     link.appendChild(icon);
 
