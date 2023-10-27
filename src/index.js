@@ -53,7 +53,9 @@ function createHeader() {
 function initialize() {
     const currentPage = localStorage.getItem("currentPage");
 
-    if (!currentPage) localStorage.setItem("currentPage", "home");
+    if (!currentPage) {
+        localStorage.setItem("currentPage", "home")
+    };
 
     contentContainer.appendChild(createHeader());
 
