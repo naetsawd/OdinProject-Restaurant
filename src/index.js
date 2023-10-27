@@ -12,6 +12,8 @@ const navigationLinks = [
 
 const contentContainer = document.getElementById("content");
 
+initialize();
+
 function createHeaderLink(text, action, page) {
     const currentPage = localStorage.getItem("currentPage");
     const link = document.createElement("p");
@@ -51,6 +53,10 @@ function createHeader() {
 function initialize() {
     const currentPage = localStorage.getItem("currentPage");
 
+    if (!currentPage) localStorage.setItem("currentPage", "home");
+
+    contentContainer.appendChild(createHeader());
+
     if (currentPage === "menu") {
         contentContainer.appendChild(createMenuSection());
     } else if (currentPage === "contact") {
@@ -58,6 +64,8 @@ function initialize() {
     } else {
         contentContainer.appendChild(createHomeSection());
     }
+
+    contentContainer.appendChild(createFooter());
 }
 
 function createFooter() {
@@ -83,7 +91,3 @@ function createFooter() {
 
     return footerContainer;
 }
-
-contentContainer.appendChild(createHeader());
-initialize();
-contentContainer.appendChild(createFooter());
